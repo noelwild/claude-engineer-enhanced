@@ -1,0 +1,137 @@
+```css
+/* Split pane styles */
+.split-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.split-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.gutter {
+  background-color: #374151;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transition: all 0.3s ease;
+}
+
+.gutter:hover {
+  background-color: #4b5563;
+}
+
+.gutter.gutter-vertical {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+YMAxaiZkM+NMKE8c1sKnHh4sWLyOSFyBsAlgIKf5N6FZkAAAAASUVORK5CYII=');
+  cursor: row-resize;
+  height: 5px;
+}
+
+.gutter.gutter-horizontal {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+YMAxaiZkM+NMKE8c1sKnHh4sWLyOSFyBsAlgIKf5N6FZkAAAAASUVORK5CYII=');
+  cursor: col-resize;
+  width: 5px;
+}
+
+/* Custom scrollbar for main content */
+.app-container ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.app-container ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.app-container ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+.app-container ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Smooth transitions */
+.app-container * {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Focus states */
+.app-container button:focus,
+.app-container input:focus,
+.app-container textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Code editor like styling */
+.code-editor {
+  background: #0f172a;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+}
+
+.code-editor:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .gutter.gutter-vertical {
+    height: 10px;
+  }
+  
+  .gutter.gutter-horizontal {
+    width: 10px;
+  }
+}
+```
