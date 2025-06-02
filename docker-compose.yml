@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  claude-engineer-enhanced:
+    build: .
+    ports:
+      - "3001:3001"  # React frontend
+      - "8002:8002"  # FastAPI backend
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - NODE_ENV=production
+      - ANDROID_HOME=/opt/android-sdk
+    volumes:
+      - ./projects:/app/projects
+      - android_sdk:/opt/android-sdk
+      - miniconda:/opt/miniforge3
+    stdin_open: true
+    tty: true
+
+volumes:
+  android_sdk:
+  miniconda:
