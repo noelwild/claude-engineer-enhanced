@@ -1,0 +1,115 @@
+# Dependencies
+node_modules/
+enhanced_frontend/node_modules/
+enhanced_frontend/build/
+enhanced_frontend/.env.local
+enhanced_frontend/.env.development.local
+enhanced_frontend/.env.test.local
+enhanced_frontend/.env.production.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific - Keep structure but ignore generated content
+android_projects/*
+!android_projects/.gitkeep
+web_projects/*
+!web_projects/.gitkeep
+python_projects/*
+!python_projects/.gitkeep
+
+# Build outputs
+android_projects/*/bin/
+android_projects/*/build/
+android_projects/*/buildozer/
+web_projects/*/node_modules/
+python_projects/*/__pycache__/
+
+# Logs
+*.log
+logs/
+tmp/
+temp/
+
+# Secrets and environment
+.env
+.env.local
+.env.production
+config/secrets.json
+
+# Android
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+
+# Buildozer
+.buildozer/
+bin/
+
+# Conda
+.conda/
+.condarc
+
+# Testing
+.coverage
+.pytest_cache/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Docker
+Dockerfile.dev
+
+# Runtime and temporary files
+/tmp/
+enhanced_backend/*.log
